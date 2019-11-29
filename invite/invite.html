@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/invite.css">
+    <title>免费拿福利</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="bg">
+            <img src="./images/bg3.png" alt="">
+
+            <!-- <div class="f_l">
+                <div class="f_l1"><img src="./images/l-f1.png" alt=""></div>
+                <div class="f_l2"><img src="./images/l-f2.png" alt=""></div>
+            </div>
+            <div class="f_r"><img src="./images/r-f1.png" alt=""></div>
+            <div class="mount"><img src="./images/mount.png" alt=""></div>
+            <div class="gift"><img src="./images/gift.png" alt=""></div>
+            <div class="write"><img src="./images/write.png" alt=""></div>
+            <div class="bottom"><img src="./images/gift_bom.png" alt=""></div> -->
+
+        </div>
+        <!-- <div class="title">御书房邀你来看免费小说</div>
+        <div class="slogan">
+            <p>海量小说免费看</p>
+            <p>更有现金福利等你拿</p>
+        </div> -->
+        <div class="code-box" id="codeBtn">
+            <span id="codeNum">HK100</span>
+            <span class="code-btn">点击复制邀请码，安装APP后在个人中心填写即可领取红包</span>
+        </div>
+
+        <div class="download">
+            <span class="download-btn" id="download-btn">立即下载</span>
+            <p>仅限新用户可参与哦</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function copyArticle(event) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('codeNum'));
+
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('copy');
+        alert("复制成功！");
+    }
+    document.getElementById('codeBtn').addEventListener('click', copyArticle, false);
+
+
+    var btn = document.getElementById('download-btn');
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    var ua = window.navigator.userAgent.toLowerCase();
+    var isWX = ua.match(/MicroMessenger/i) == 'micromessenger'; // 微信端 （安卓微信端无法下载）
+    btn.addEventListener('click', function () {
+        if (isAndroid) {
+            if (isWX) {
+                alert('请点击右上角在浏览器打开')
+                return
+            }
+            location.href = '安卓包下载地址'
+        } else if (isiOS) {
+            location.href = 'itms-services://?action=download-manifest&url=ios包服务器地址'
+        } else {
+            alert('手机扫描二维码下载')
+        }
+    })
+</script>
+
+</html>

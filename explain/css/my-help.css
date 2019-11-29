@@ -1,0 +1,87 @@
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    color: #333;
+    font-size: 12px;
+    font-family: "Microsoft YaHei"
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+select,
+input,
+img,
+select {
+    vertical-align: middle;
+}
+
+input {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #c00;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+#form1 {
+    width: 100%;
+}
+
+.MenuPanel {
+    width: 100%;
+}
+
+.MenuTitle {
+    font-size: .43336rem;
+    color: #262626;
+    line-height: 1.8999rem;
+    border-bottom: 1px solid #ddd;
+    padding: 0 4%;
+    background: #fff url("../images/top.png") no-repeat 96%/.6rem auto;
+}
+.MenuTitle.open{
+    background-image:url("../images/open.png");
+}
+.MenuContent {
+    width: 100%;
+    font-size: .399rem;
+    line-height: .67rem;
+    color: #878585;
+    background-color: #f5f5f5;
+    padding: .6em 4% 1.4em;
+    box-sizing: border-box;
+    display: none;
+}

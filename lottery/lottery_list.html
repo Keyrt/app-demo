@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中奖记录</title>
+
+    <link rel="stylesheet" href="/public/api/css/lottery-list.css">
+    <!-- <script src="/public/api/js/jquery-1.10.2.js"></script> -->
+    <!-- 移动端适配 -->
+    <script>
+        var html = document.querySelector('html');
+        changeRem();
+        window.addEventListener('resize', changeRem);
+
+        function changeRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 10 + 'px';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <img class="bg-top" src="/public/api/images/bg-top.png" alt="">
+        <!-- <a href="javascript:goUrl();"> -->
+        <div class="back_btn " onclick="window.history.back()">返回</div>
+        <!-- </a> -->
+        <div class="container">
+            <ul>
+                {volist name="lst" id="vo" empty="没有抽奖记录,去抽奖吧!"}
+                <li>
+                    <p class="gold">{$vo.prize}</p>
+                    <p class="date">{$vo.time}</p>
+                    <p class="status">{$vo.status}</p>
+                </li>
+                {/volist}
+            </ul>
+        </div>
+        <img class="bg-bottom" src="/public/api/images/bg-bottom.png" alt="">
+    </div>
+
+    <!-- <script src="/public/api/js/lottery.js"></script>
+    <script language="javascript">
+        $(document).ready(
+            function () {
+                let baseurl = "https://www.aibookchina.com";
+                var Url3 = baseurl + "/api/Goldrandom/lottery_list";
+                $.post(Url3, {
+                    "uid": getCookie("uid")
+                    // "uid": 16417
+                }, function (res) {
+                    alertMsg(getCookie("uid"))
+                    // window.location.href = 'https://www.aibookchina.com/api/Goldrandom/lottery_list';
+                })
+            }
+        )
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    color: #333;
+    font-size: 12px;
+    font-family: "Microsoft YaHei"
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+select,
+input,
+img,
+select {
+    vertical-align: middle;
+}
+
+input {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #c00;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.wrap {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 3rem);
+}
+
+.wrap>img {
+    width: 100%;
+}
+
+.bg-bottom {
+    margin-top: -3rem;
+}
+
+.back_btn {
+    z-index: 20;
+    position: fixed;
+    top: 0.5rem;
+    left: 0;
+    width: 1.875rem;
+    height: 0.79rem;
+    border-radius: 0 90px 90px 0;
+    text-align: center;
+    line-height: 0.79rem;
+    color: white;
+    font-size: 3.7vw;
+    background: #FE6E19;
+    letter-spacing: .2rem;
+}
+
+.container {
+    /* background: linear-gradient(90deg, #F75757, #FA884B, #FA9547); */
+    background: -webkit-linear-gradient(90deg, #f76553, #FA9547);
+}
+
+.container ul {
+    text-align: center;
+    position: relative;
+    top: -3rem;
+    background-color: #fff;
+    margin: 0 .7rem 0 .8rem;
+}
+
+.container ul li {
+    text-align: left;
+    position: relative;
+    margin: 0 .5rem;
+    border-bottom: 1px solid #CCCCCC;
+    padding: .3rem 0;
+}
+
+.container ul li .gold {
+    font-size: 0.53rem;
+    color: #FF6633;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    line-height: 1rem;
+}
+
+.container ul li .date {
+    font-size: 0.4rem;
+    color: #999999;
+    font-weight: normal;
+    /* letter-spacing: .1rem; */
+    line-height: .6rem;
+}
+
+.container ul li .status {
+    font-size: 0.46rem;
+    color: #CCCCCC;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    line-height: 2.2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

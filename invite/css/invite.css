@@ -1,0 +1,208 @@
+html,
+body {
+    height: 100%
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    /* height: 100% */
+    height: 160vw;
+}
+
+.content .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.content .bg img{
+    width: 100%;
+} 
+/* .content .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #90AEF3;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.content .bg img {
+    width: 100%;
+}
+
+.content .bg .f_l {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10.94vw;
+
+}
+
+.content .bg .f_r {
+    position: absolute;
+    top: 22.19vw;
+    right: 0;
+    width: 11.86vw;
+
+}
+
+.content .bg .mount {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    bottom: 124vw;
+}
+
+.content .bg .mount img {
+    position: absolute;
+    width: 250%;
+    left: -117vw;
+}
+
+.content .bg .gift {
+    position: absolute;
+    left: 12.19vw;
+    width: 57.19vw;
+    z-index: 6;
+    bottom: 38vw;
+}
+
+.content .bg .write {
+    position: absolute;
+    right: 0;
+    width: 77.5vw;
+    z-index: 3;
+    bottom: 25vw;
+}
+
+.content .bg .bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    bottom: 56vw;
+}
+
+.content .bg .bottom img {
+    position: absolute;
+    width: 192%;
+    left: -79vw;
+} */
+
+
+
+
+
+/* .content .title {
+    position: relative;
+    top: 10vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 4.6vw;
+    color: #fff;
+    width: 86vw
+}
+
+.content .title::before,
+.content .title::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 15.3125vw;
+    height: 4.67vw;
+    margin: 0 1vw;
+}
+
+.content .title::before {
+    background: url("../images/title-l.png")no-repeat center;
+    background-size: 100%;
+}
+
+.content .title::after {
+    background: url("../images/title-r.png")no-repeat center;
+    background-size: 100%;
+}
+
+.content .slogan {
+    position: relative;
+    font-size: 9vw;
+    text-align: center;
+    top: 15vw;
+    letter-spacing: .5vw
+}
+
+.content .slogan p {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 0px #fff, 
+                -4px 6px 7px #6E97DB, 
+                0 0 20px #6E97DB;
+    background: -webkit-linear-gradient(top, #fff, #FFF0D2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content .slogan p:nth-of-type(2) {
+    font-size: 8vw;
+    margin-top: 1vw;
+} */
+
+.code-box {
+    position: absolute;
+    width: 70vw;
+    height: 32vw;
+    top: 47vw;
+    /* top: 56vw; */
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 4vw;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 2vw;
+}
+
+.code-box #codeNum {
+    text-align: center;
+    font-size: 7vw;
+    color: #EA4B3D;
+    width: 100%;
+    display: inline-block;
+}
+
+.code-btn {
+    text-align: center;
+    font-size: 3.8vw;
+    color: #ccc;
+    display: inline-block;
+    margin-top: 3vw;
+    letter-spacing: .2vw;
+}
+
+.download {
+    position: absolute;
+    bottom: 5vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.download-btn {
+    display: inline-block;
+    width: 73.75vw;
+    height: 13.45vw;
+    background-color: #FCD637;
+    color: #333;
+    text-align: center;
+    line-height: 13.45vw;
+    border-radius: 13.45vw;
+    font-size: 4.2vw;
+}
+
+.download p {
+    font-size: 3vw;
+    color: #EFEFEF;
+    text-align: center;
+    margin-top: 2vw;
+    letter-spacing: .3vw;
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="__PUBLIC__/api/css/base.css">
+    <link rel="stylesheet" href="__PUBLIC__/api/css/partake.css?v=1.24">
+    <title>邀请好友</title>
+    <script src="__PUBLIC__/api/js/jquery-1.10.2.js"></script>
+    <script src="__PUBLIC__/api/js/partake.js?v=1.24"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="bg"><img src="__PUBLIC__/api/images/pt_bg.png" alt=""></div>
+        <div class="header">
+            <div class="title">
+                <img src="__PUBLIC__/api/images/pt_title.png" alt="">
+            </div>
+        </div>
+        <div class="main_area">
+
+            <div class="bg_bottom"></div>
+            <div class="codeForm">
+                <form id="invite">
+                    <div class="phone">
+                        <input type="text" id="phone" name="phone" placeholder="输入您的手机号">
+                    </div>
+                    <div class="verification">
+                        <input type="text" name="number" id="number" placeholder="输入您的验证码">
+                        <input class="verButton" type="button" value="发送验证码" id="getCode">
+                    </div>
+                    <div class="buttons">
+                        <input type="button" value="立即加入" id="join">
+                    </div>
+                </form>
+            </div>
+            <div class="directions">
+                <div class="buckle left"></div>
+                <div class="buckle right"></div>
+                <div class="d_title">
+                    <h2>规则说明 </h2>
+                </div>
+                <div id="index7" class="info_change">
+                    <h2 class="index_tit">双人7天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到7天即可领取现金奖励5元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                <div id="index8" class="info_change">
+                    <h2 class="index_tit">双人7天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到7天即可领取现金奖励10元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                <div id="index9" class="info_change">
+                    <h2 class="index_tit">双人7天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到7天即可领取现金奖励15元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                <div id="index10" class="info_change">
+                    <h2 class="index_tit">双人28天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到28天即可领取现金奖励30元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index11" class="info_change">
+                    <h2 class="index_tit">双人28天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到28天即可领取现金奖励60元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index12" class="info_change">
+                    <h2 class="index_tit">双人28天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到28天即可领取现金奖励90元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+
+                <div id="index13" class="info_change">
+                    <h2 class="index_tit">双人365天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到365天即可领取现金奖励666元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index14" class="info_change">
+                    <h2 class="index_tit">双人365天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到365天即可领取现金奖励888元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index15" class="info_change">
+                    <h2 class="index_tit">双人365天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到365天即可领取现金奖励1088元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+
+                <div id="index16" class="info_change">
+                    <h2 class="index_tit">三人7天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到7天即可领取现金奖励6元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                <div id="index17" class="info_change">
+                    <h2 class="index_tit">三人7天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到7天即可领取现金奖励12元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                <div id="index18" class="info_change">
+                    <h2 class="index_tit">三人7天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到7天即可领取现金奖励18元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                
+                <div id="index19" class="info_change">
+                    <h2 class="index_tit">三人28天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到28天即可领取现金奖励36元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index20" class="info_change">
+                    <h2 class="index_tit">三人28天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到28天即可领取现金奖励72元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index21" class="info_change">
+                    <h2 class="index_tit">三人28天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到28天即可领取现金奖励108元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                
+                <div id="index22" class="info_change">
+                    <h2 class="index_tit">三人365天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到365天即可领取现金奖励800元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index23" class="info_change">
+                    <h2 class="index_tit">三人365天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到365天即可领取现金奖励1066元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index24" class="info_change">
+                    <h2 class="index_tit">三人365天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到365天即可领取现金奖励1305元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+
+                <div id="index25" class="info_change">
+                    <h2 class="index_tit">四人7天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到7天即可领取现金奖励7元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                <div id="index26" class="info_change">
+                    <h2 class="index_tit">四人7天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到7天即可领取现金奖励14元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+                <div id="index27" class="info_change">
+                    <h2 class="index_tit">四人7天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到7天即可领取现金奖励21元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                    </ul>
+                </div>
+
+                <div id="index28" class="info_change">
+                    <h2 class="index_tit">四人28天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到28天即可领取现金奖励42元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index29" class="info_change">
+                    <h2 class="index_tit">四人28天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到28天即可领取现金奖励84元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index30" class="info_change">
+                    <h2 class="index_tit">四人28天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到28天即可领取现金奖励126元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前10天漏签可有3次补签的机会，可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+
+                <div id="index31" class="info_change">
+                    <h2 class="index_tit">四人365天平民难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成1个任务，当天即可签到成功，连续签到28天即可领取现金奖励42元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index32" class="info_change">
+                    <h2 class="index_tit">四人365天贵人难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成2个任务，当天即可签到成功，连续签到365天即可领取现金奖励1234元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+                <div id="index33" class="info_change">
+                    <h2 class="index_tit">四人365天帝王难度</h2>
+                    <ul class="detail">
+
+                        <li>1. 每日完成5个任务，当天即可签到成功，连续签到365天即可领取现金奖励1523元/人。</li>
+                        <li>2. 若同队中有队友漏签，没有连续签到，则任务失败，不可领取奖励。</li>
+                        <li>3. 前3个月漏签可有10次补签的机会。可用于自己补签，也可用于帮队友补签，补签1次需要支付180御币。</li>
+                    </ul>
+                </div>
+
+                <p>注：做任务看的广告，都必需点击“立即下载”跳到下载页面才算生效哦。</p>
+                <p><span>* </span>进入APP可了解更多玩法哦。</p>
+            </div>
+        </div>
+
+
+        <div class="cover"></div>
+        <div class="covers">
+            <div class="covers_header">
+                <p>长按二维码下载app</p>
+            </div>
+            <div class="covers_icon">
+                <img src="__PUBLIC__/api/images/pt_microQr.png" alt="">
+            </div>
+            <div class="covers_quit">我知道了</div>
+
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+</script>
+
+</html>

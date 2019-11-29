@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0"> -->
+    <title>幸运大转盘</title>
+    <link rel="stylesheet" href="__PUBLIC__/api/css/lottery.css?r=2.36">
+    <script src="__PUBLIC__/api/js/jquery-1.10.2.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+
+    <!-- 移动端适配 -->
+    <script>
+        var html = document.querySelector('html');
+        changeRem();
+        window.addEventListener('resize', changeRem);
+
+        function changeRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 10 + 'px';
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="wrap">
+        <img class="turntablebg" src="__PUBLIC__/api/images/bg.png" alt="">
+        <div class="header">
+            <div class="title"><img src="__PUBLIC__/api/images/title.png" alt=""></div>
+        </div>
+        <div class="lottery-listt">
+            <div class="float_btn">中奖记录</div>
+        </div>
+
+        <!--滚动信息-->
+        <div class="scroll">
+            <p></p>
+            <div class="sideBox">
+                <div class="bd" id="txtMarqueeTop">
+                    <ul>
+                        {volist name="lst" id="vo"}
+                        <li>
+                            恭喜<span class="start-num">{$vo.name}</span>****<span class="end-num"></span>
+                            获得<span class="info">{$vo.prize}</span>
+                        </li>
+                        {/volist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="endtime">
+
+        </div>
+        <!-- 大转盘 -->
+        <div class="turntable">
+            <div class="rotate"><img id="rotate" src="__PUBLIC__/api/images/turntable.png" /></div>
+            <div class="pointer"><img src="__PUBLIC__/api/images/pointer.png" /></div>
+        </div>
+
+        <!-- 活动规则 -->
+        <div class="rules">
+            <h2>活动规则</h2>
+            <ul id="glod">
+                <li>1.每天有4次免费抽奖的机会，首次可直接抽奖，其余3次机会可通过观看视频来获取，每个视频次数间隔需要8s，每完整看完一次视频即可进行一次抽奖。
+                </li>
+                <li>2.观看视频过程中请勿退出，若退出则视为放弃本次抽奖机会。 </li>
+                <li>3.4次免费抽奖机会用完后，还可花费金币进行抽奖，100金币可抽一次，无上限。</li>
+            </ul>
+            <ul id="star">
+                <li>1. 抽奖机会可通过观看视频来获取，每完整看完一条视频即可进行一次抽奖。</li>
+                <li>2. 观看视频过程中请勿退出，若退出则视为放弃本次抽奖机会。</li>
+                <li>3. 每看完一条视频都必需点击“立即下载”跳到下载页面才算生效哦。</li>
+            </ul>
+        </div>
+        <!-- 弹出层 -->
+        <div class="cover"></div>
+
+        <div class="covers2">
+            <div class="covers_header">
+                <p>中奖啦</p>
+            </div>
+            <div class="covers_icon">
+                <img src="__PUBLIC__/api/images/gold.png" alt="" class="img" />
+            </div>
+            <div class="covers_font">
+                <div class="reward">恭喜您获得抽中<span>88金币</span></div>
+                <p>已存入您的余额</p>
+            </div>
+
+            <div class="covers_quit">我知道了</div>
+
+        </div>
+
+        <div class="covers3">
+            <div class="covers_header">
+                <p>看视频抽大奖</p>
+            </div>
+            <div class="covers_font">
+                <p>观看完小视频后即可获得再次抽奖的机会，中途如退出视为放弃本次抽奖的机会哦~</p>
+            </div>
+            <div class="covers_btn covers_btn1">放弃抽奖</div>
+
+            <div class="covers_btn2 video"><i><img src="__PUBLIC__/api/images/video.png" alt=""></i>看视频</div>
+
+        </div>
+        <div class="covers4">
+            <div class="covers_header">
+                <p>花金币抽大奖</p>
+            </div>
+            <div class="covers_font">
+                <p>需要花费100个金币才可以进行一次抽奖哦~</p>
+            </div>
+            <div class="covers_btn covers_btn1">放弃抽奖</div>
+
+            <div class="covers_btn2 gold">继续抽奖</div>
+
+        </div>
+    </div>
+
+
+
+    <script src="__PUBLIC__/api/js/awardRotate.js"></script>
+    <script src="__PUBLIC__/api/js/lottery.js?r=2.36"></script>
+    <script src="__PUBLIC__/api/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript">
+        jQuery("#txtMarqueeTop").slide({
+            mainCell: "ul",
+            autoPlay: true,
+            effect: "topMarquee",
+            interTime: 50,
+            vis: 6
+        });
+        // eruda.init();
+    </script>
+</body>
+
+</html>

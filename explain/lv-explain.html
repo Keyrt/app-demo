@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>了解VIP</title>
+
+    <link rel="stylesheet" href="./css/explain.css">
+    <!-- 移动端适配 -->
+    <script>
+        var html = document.querySelector('html');
+        changeRem();
+        window.addEventListener('resize', changeRem);
+
+        function changeRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 10 + 'px';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="item">
+            <div class="title">
+                <h2>什么是用户成长等级</h2>
+            </div>
+            <div class="info">
+                <p>在御书房文学APP平台进行各项操作后累加的一个数值等级，活跃度越高，获得的推荐票越多。用户根据完成的任务获得积分，积分用来获得相应的等级称号，每日登录时并获得对应数量的推荐票，书券消费不算奖励积分。
+                </p>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="title">
+                <h2>积分说明</h2>
+            </div>
+            <div class="info">
+                <p>等级积分：用户在做任务时获取的积分总计。</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="title">
+                <h2>如何获取积分</h2>
+            </div>
+            <div class="info">
+                <p>(1）签到+5积分</p>
+                <p>
+                    (2）充值+10*X（X代表充值金额，可重复领取）</p>
+                <p>
+                    (3）打赏+5*X（X代表打赏金额后折算的人民币金额，可重复领取）</p>
+                <p>
+                    (4）评论+5（仅限每天的第一条评论）</p>
+                <p>
+                    (5）订阅+5*X（X代表御币订阅的VIP章节数，使用书券不获得积分，可重复领取）
+                </p>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="title">
+                <h2>等级介绍</h2>
+            </div>
+            <div class="info_img">
+                <img src="./images/lv_explain.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="tip">
+            <p>· 解释权归御书房文学所有</p>
+        </div>
+    </div>
+</body>
+
+</html>

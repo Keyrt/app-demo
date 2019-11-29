@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>了解VIP</title>
+
+    <link rel="stylesheet" href="./css/explain.css">
+    <!-- 移动端适配 -->
+    <script>
+        var html = document.querySelector('html');
+        changeRem();
+        window.addEventListener('resize', changeRem);
+
+        function changeRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 10 + 'px';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="banner"><img src="./images/banner.png" alt=""></div>
+    <div class="content">
+        <div class="item">
+            <div class="title">
+                <h2>先帝玺绶</h2>
+            </div>
+            <div class="info">
+                <p>获得先帝玺绶仅需288元，即可畅读全站任意作品！且可获得免广告特权。</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="title">
+                <h2>包年会员</h2>
+            </div>
+            <div class="info">
+                <p>开通年费会员123元，即可观看全站任意完结作品，且可获得免广告特权。</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="title">
+                <h2>包月会员</h2>
+            </div>
+            <div class="info">
+                <p>开通包月会员32元，即可获得先帝玺绶权限，畅读全站任意作品，还可免广告。</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="title">
+                <h2>最终说明</h2>
+            </div>
+            <div class="info">
+                <p>
+                    1.购买年费会员后，仅可免费阅读全站任意已经完结的作品。无法阅读连载书籍，请谨慎购买。
+                </p>
+                <p>
+                    2.购买了包年会员、先帝玺绶特权后，自开通成功之日起有效，不自动续订，不支持退订，不支持转换。
+                </p>
+                <p>
+                    3.最终解释权归御书房文学所有。
+                </p>
+            </div>
+
+        </div>
+
+        <div class="explain">
+            <p>如您有其它疑问欢迎您联系御书房文学客服QQ3390660677进行咨询，也可帮助我们更好的完善我们的产品。</p>
+        </div>
+    </div>
+</body>
+
+</html>
